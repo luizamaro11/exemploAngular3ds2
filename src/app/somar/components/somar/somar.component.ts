@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SomarService } from '../../services';
 
 @Component({
   selector: 'app-somar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SomarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private somar: SomarService) { }
+  private valor: number;
+
 
   ngOnInit() {
+    this.valor = 0;
+  }
+
+  calcula(valorRecebido: number): number{
+      return this.somar.somar(this.valor,valorRecebido);
+  }
+
+  get pegaValor(){
+    return this.valor;
   }
 
 }
