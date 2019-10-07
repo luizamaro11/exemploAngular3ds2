@@ -6,20 +6,20 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control texto">
+            <input type="text" class="form-control texto" [value]="pegaValor">
         </div>
     </div>
 </div>
 <div class="row">
     <div class="form-group">
         <div class="col-md-4">
-            <button class="btn btn-primary btn-block botao">Lanche R$ 5.00</button>
+            <button class="btn btn-primary btn-block botao" (click)="calcula(5)">Lanche R$ 5.00</button>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-primary btn-block botao">Bebida R$ 4.00</button>
+            <button class="btn btn-primary btn-block botao" (click)="calcula(4)">Bebida R$ 4.00</button>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-primary btn-block botao">Doce R$ 3.00</button>
+            <button class="btn btn-primary btn-block botao" (click)="calcula(3)">Doce R$ 3.00</button>
         </div>
     </div>
    
