@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { RoutesSomar } from './somar';
 
 export const rotas = [
-
+    { 
+        path: 'index', 
+        pathMatch: 'full', 
+        redirectTo: 'localhost:4200'
+    },
+    ...RoutesSomar
 ]
-
-import { AppComponent } from './app.component';
-
-import { SomarModule } from './somar';
 @NgModule({
   imports: [
     RouterModule.forRoot(rotas)
